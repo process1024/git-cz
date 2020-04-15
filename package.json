@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "commit": "git add . && git-cz",
+    "commit": "git add . && git-cz && changelog",
     "lint": "eslint . --cache"
   },
   "devDependencies": {
