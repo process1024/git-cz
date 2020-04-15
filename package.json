@@ -3,8 +3,26 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "commit": "git add . && git-cz",
+    "lint": "eslint . --cache"
+  },
   "devDependencies": {
     "commitizen": "^4.0.4",
-    "cz-conventional-changelog": "^3.1.0"
+    "cz-conventional-changelog": "^3.1.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.5",
+    "pre-commit": "^1.2.2",
+    "yorkie": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint"
+    }
   }
 }
